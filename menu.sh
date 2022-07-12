@@ -1,9 +1,10 @@
 #!/bin/bash
 PWD=$(pwd)
 while true
+TIME=`date +%b-%d-%y-%H%M%S
 do
     PS3='Imminent-Darkness Linux Backup/Recovery Script = Make a Selection: '
-    options=("Backup Process" "Recovery Process" "Forensic Recovery" "Quit")
+    options=("Backup Process" "Recovery Process" "Forensic Recovery" "System Info (All)" "System Info (Min)" "Quit")
     select OPT in "${options[@]}"
 do
     case $OPT in
@@ -19,6 +20,12 @@ do
 		"${PWD}/forensics.sh"
           break
           ;;
+	"System Info (All)")
+		"${PWD}/system-info.sh -all ${PWD}/system-scans/full-scan_${TIME}.txt"
+	  break
+	  ;;
+	"System Info (Min)")
+		"${PWD}/system-info.sh -min ${PWD}/system-scans/min-scan_${TIME}.txt"
         "Quit")
     echo "Thank you"
     exit
