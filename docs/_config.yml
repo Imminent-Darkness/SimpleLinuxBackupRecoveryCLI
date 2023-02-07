@@ -1,0 +1,7 @@
+remote_theme: pages-themes/cayman@v0.2.0
+plugins     :
+    - jekyll-remote-theme # add this line to the plugins list if you already have one
+title       : "SimpleLinuxBackupRecoveryCLI"
+subtitle    : "Perform directory backup and recovery, forensic recovery of deleted files, and enumeration of system info."
+url         : "https://imminent-darkness.github.io"
+baseurl     : "/SimpleLinuxBackupRecoveryCLI" 
