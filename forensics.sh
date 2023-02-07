@@ -5,7 +5,7 @@ PWD=$(pwd)
 echo -n "What is the name of the file to undelete? (without the file extension): "
 read UNDELETE
 
-echco "Focus set on $UNDELETE"
+echo "Focus set on $UNDELETE"
 read -p "Processing search ... " -t 5.0
 umount thinclient_drives
 
